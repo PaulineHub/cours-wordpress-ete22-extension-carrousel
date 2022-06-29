@@ -9,7 +9,7 @@
     
     
     for (let i = 0; i < elGalerie__img.length; i++) {
-        elGalerie__img[i].addEventListener('mousedown', function () {  //Image clické ? : on accède récupère son 'scr';
+        elGalerie__img[i].addEventListener('mousedown', function () {  //Image cliquée ? : on accède récupère son 'scr';
             let src = elGalerie__img[i].getAttribute('src');
     
             console.log(src);
