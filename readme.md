@@ -1,3 +1,3 @@
 # Extension Carrousel
 
-Développement d'une extension carrousel.
+Développement d'une extension carrousel avec images.
