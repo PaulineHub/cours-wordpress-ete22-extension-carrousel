@@ -4,8 +4,8 @@
     
     // Création dynamique d'une galerie d'images.
     
-    let elGalerie = document.querySelector('.galerie'); // Récuperation de galerie créé dans l'éditeur gutemberg 
-    let elGalerie__img = elGalerie.querySelectorAll('.galerie figure img'); // Récuperation des images de la galerie gutemberg
+    let elGalerie = document.querySelector('.galerie'); // Récuperation de galerie créé dans l'éditeur gutemberg .
+    let elGalerie__img = elGalerie.querySelectorAll('.galerie figure img'); // Récuperation des images de la galerie gutemberg.
     
     
     for (let i = 0; i < elGalerie__img.length; i++) {
