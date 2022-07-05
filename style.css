@@ -5,6 +5,7 @@
   background-color: #a18e82;
   top: 2vh;
   left: 0;
+  z-index: 2;
 }
 
 @media screen and (min-width: 700px) {
@@ -14,5 +15,9 @@
     top: 25vh;
     left: 25vw;
   }
+}
+
+.carrousel_figure {
+  position: absolute;
 }
 /*# sourceMappingURL=style.css.map */
