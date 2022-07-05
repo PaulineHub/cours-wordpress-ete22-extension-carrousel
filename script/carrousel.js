@@ -8,16 +8,16 @@
     let elmCarrousel__figure = document.querySelector('.carrousel__figure')
     let elmCarrousel__fermeture = document.querySelector('.carrousel__fermeture');
     let elmCarrousel__radio = document.querySelector('.carrousel__radio');
-    console.log(elmGalerieImg[0].getAttribute('src'))
+    //console.log(elmGalerieImg[0].getAttribute('src'))
+    let index = 0;
 
     for (const img of elmGalerieImg){
-        
         ajouter_elmImg(img);
+        ajouter_elmRadio();
         let elmRadio = document.createElement('input');
         elmRadio.setAttribute('type', 'radio');
         elmCarrousel__radio.appendChild(elmRadio);
         img.addEventListener('mousedown', function () {
-            console.log(img)
             elmCarrousel.classList.add('carrousel_ouvrir');
         })
     }
@@ -27,6 +27,19 @@
         elmImg.classList.add('carrousel_figure__img')
         elmImg.setAttribute('src', img.getAttribute('src'));
         elmCarrousel__figure.appendChild(elmImg);
+        elmImg.dataset.index = index;
+        index++;
+    }
+
+    function ajouter_elmRadio(){
+        let elmRadio = document.createElement('input');
+        elmRadio.setAttribute('type', 'radio');
+        elmRadio.dataset.index = index;
+        index++;
+        elmCarrousel__radio.appendChild(elmRadio);
+        elmRadio.addEventListener('mousedown', function(){
+            elmCarrousel__figure.children[this.dataset.index].classList.add('carrousel_figure__img--activer')
+        })
     }
     
     
