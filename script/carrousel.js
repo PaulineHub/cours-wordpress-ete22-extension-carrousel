@@ -4,16 +4,17 @@
     
     // Création dynamique d'une galerie d'images.
     
-    let elGalerie = document.querySelector('.galerie'); // Récuperation de galerie créé dans l'éditeur gutemberg .
-    let elGalerie__img = elGalerie.querySelectorAll('.galerie figure img'); // Récuperation des images de la galerie gutemberg.
-    
-    
-    for (let i = 0; i < elGalerie__img.length; i++) {
-        elGalerie__img[i].addEventListener('mousedown', function () {  //Image cliquée ? : on accède récupère son 'scr';
-            let src = elGalerie__img[i].getAttribute('src');
-    
-            console.log(src);
-        });
+    let elmGalerie = document.querySelector('.galerie')
+    let elmGalerieImg = elmGalerie.querySelectorAll("figure figure img")
+    let elmCarrousel = document.querySelector('.carrousel')
+    let elmCarrousel__figure = document.querySelector('.carrousel__figure')
+    console.log(elmGalerieImg[0].getAttribute('src'))
+    for (const img of elmGalerieImg){
+        img.addEventListener('mousedown', function(){
+            console.log(this.getAttribute('src'))
+            elmCarrousel.classList.add('carrousel__active')
+            console.log(elmCarrousel.classList)
+        })
     }
     
     
