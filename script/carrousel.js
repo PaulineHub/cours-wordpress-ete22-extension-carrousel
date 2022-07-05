@@ -14,9 +14,6 @@
     for (const img of elmGalerieImg){
         ajouter_elmImg(img);
         ajouter_elmRadio();
-        let elmRadio = document.createElement('input');
-        elmRadio.setAttribute('type', 'radio');
-        elmCarrousel__radio.appendChild(elmRadio);
         img.addEventListener('mousedown', function () {
             elmCarrousel.classList.add('carrousel_ouvrir');
         })
