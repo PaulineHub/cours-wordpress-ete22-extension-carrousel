@@ -36,7 +36,11 @@
         index++;
         elmCarrousel__radio.appendChild(elmRadio);
         elmRadio.addEventListener('mousedown', function(){
-            elmCarrousel__figure.children[this.dataset.index].classList.add('carrousel_figure__img--activer')
+            if (ancien_index != -1) {
+                elmCarrousel__figure.children[ancien_index.index].classList.add('carrousel_figure__img--activer');
+            }
+            elmCarrousel__figure.children[this.dataset.index].classList.add('carrousel_figure__img--activer');
+            ancien_index = this.dataset.index;
         })
     }
     
