@@ -10,6 +10,7 @@
     let elmCarrousel__radio = document.querySelector('.carrousel__radio');
     //console.log(elmGalerieImg[0].getAttribute('src'))
     let index = 0;
+    let ancien_index = -1;
 
     for (const img of elmGalerieImg){
         ajouter_elmImg(img);
